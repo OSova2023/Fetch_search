@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./news.css";
 
-const News = ({ fetchData, myNews, keyword, query }) => {
+const Filter = ({ fetchData, myNews, keyword, query }) => {
   // const API = "bea58f088a294fe1a4a0f086e912d823";
 
   // const [myNews, setMyNews] = useState([]);
@@ -60,4 +60,4 @@ const News = ({ fetchData, myNews, keyword, query }) => {
   );
 };
 
-export default News;
+export default Filter;

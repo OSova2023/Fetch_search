@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -6,7 +6,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-const Navbar1 = () => {
+const Navbar1 = ({ handleChange }) => {
+  // const [ask, setAsk] = useState("");
+  // useEffect(() => {
+  //   // setAsk();
+  //   console.log(ask);
+  // }, [ask]);
+  // const myAsk = (e) => {
+  //   setAsk(e.target.value);
+  // };
+
   return (
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -37,10 +46,12 @@ const Navbar1 = () => {
             </Nav>
             <Form className="d-flex">
               <Form.Control
+                id="input"
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                onChange={(e) => handleChange(e.target.value)}
               />
               <Button variant="outline-success">Search</Button>
             </Form>
